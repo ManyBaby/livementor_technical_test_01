@@ -1,10 +1,9 @@
 # LiveMentor - Technical Test #1
 
-## Please run the test from the lib folder
+## How to run the tests
 
 ```
-cd lib
-rspec spec
+rspec lib
 ```
 
 ## Project structure
