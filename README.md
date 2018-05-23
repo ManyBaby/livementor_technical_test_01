@@ -20,3 +20,8 @@ I think that I can split those into 3 major concerns :
 
 I believe that the goal is clear enough to TDD.
 So let's start with JSON!
+Done !
+
+Now we have something to load JSON file into ruby let's transform it to what we want: a flat ruby object.
+The deeply nested structure of the newly created ruby object must require some recursion and since I'm not the best at it I googled and found [something pretty close to what we want on StackOveflow](https://stackoverflow.com/questions/23521230/flattening-nested-hash-to-a-single-hash-with-ruby-rails).
+Awesome ! Let's implement it.
