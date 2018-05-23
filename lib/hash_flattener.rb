@@ -1,4 +1,3 @@
-require 'pry-byebug'
 class Hash
   # This method extends the Hash class
   # It flattens a nested hash by joining parents key with dots
@@ -9,7 +8,7 @@ class Hash
           h["#{k}.#{nested_k}".to_sym] = nested_v
         end
       elsif (v.is_a? Array)
-        h[k] = v.map(&:to_s).join(', ')
+        h[k] = v.map(&:to_s).join(',')
       else
         h[k] = v
       end
