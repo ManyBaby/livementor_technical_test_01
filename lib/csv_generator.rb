@@ -1,5 +1,4 @@
 require 'csv'
-require 'pry-byebug'
 module Livementor
   class CsvGenerator
     attr_reader :headers
