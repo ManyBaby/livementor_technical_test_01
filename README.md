@@ -1,5 +1,41 @@
 # LiveMentor - Technical Test #1
 
+## Please run the test from the lib folder
+
+```
+cd lib
+rspec spec
+```
+
+## Project structure
+The main file of the lib is `json_to_csv.rb`
+It loads all the other needed files
+```
+.
+├── README.md
+└── lib
+    ├── csv_generator.rb
+    ├── hash_flattener.rb
+    ├── json_file_loader.rb
+    ├── json_to_csv.rb
+    ├── spec
+    │   ├── csv_generator_spec.rb
+    │   ├── hash_flattener_spec.rb
+    │   ├── json_file_loader_spec.rb
+    │   ├── json_to_csv_spec.rb
+    │   └── sample_files
+    │       ├── csv_sample.csv
+    │       └── json_sample.json
+    └── tmp
+        └── output.csv
+```
+## Usage
+
+This lib is very simple to use
+```ruby
+Livementor::JsonToCsv.new('path_to_your_json_file', 'path_to_your_csv_file').convert
+```
+
 ## Thought process
 
 First I need to identify the concerns so I can make the code modular and extandable.
@@ -25,3 +61,6 @@ Done !
 Now we have something to load JSON file into ruby let's transform it to what we want: a flat ruby object.
 The deeply nested structure of the newly created ruby object must require some recursion and since I'm not the best at it I googled and found [something pretty close to what we want on StackOveflow](https://stackoverflow.com/questions/23521230/flattening-nested-hash-to-a-single-hash-with-ruby-rails).
 Awesome ! Let's implement it.
+
+Ok now we have to glue everything together.
+Let's create a file that will require the others and use them to achieve what we want.
